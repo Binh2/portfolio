@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import { onMounted, ref, reactive } from "vue";
+import { ref, reactive } from "vue";
 
 export default {
   emits: ["changeText"],

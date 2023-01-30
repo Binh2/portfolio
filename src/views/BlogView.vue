@@ -1,17 +1,19 @@
 <template>
-  <h1>Blog</h1>
-  <div class="blogs blogs-flex">
-    <iframe src="https://binh2.github.io/multi-step-form/" class="blog" v-bind:class="[ 'blog' + (blog1Order + 1) ]">1</iframe>
-    <div class="blog" v-bind:class="[ 'blog' + (blog2Order + 1) ]">2</div>
-    <div class="blog" v-bind:class="[ 'blog' + (blog3Order + 1) ]">3</div>
-    <div class="blog" v-bind:class="[ 'blog' + (blog4Order + 1) ]">4</div>
-    <div class="blog" v-bind:class="[ 'blog' + (blog5Order + 1) ]">5</div>
+  <div id="BlogView">
+    <h1>Blog</h1>
+    <div class="blogs blogs-flex">
+      <iframe src="https://binh2.github.io/multi-step-form/" class="blog" v-bind:class="[ 'blog' + (blog1Order + 1) ]"></iframe>
+      <div class="blog" v-bind:class="[ 'blog' + (blog2Order + 1) ]">2</div>
+      <div class="blog" v-bind:class="[ 'blog' + (blog3Order + 1) ]">3</div>
+      <div class="blog" v-bind:class="[ 'blog' + (blog4Order + 1) ]">4</div>
+      <div class="blog" v-bind:class="[ 'blog' + (blog5Order + 1) ]">5</div>
+    </div>
+    <button v-on:click="backward">Backward</button>
+    <button v-on:click="forward">Forward</button>
   </div>
-  <button v-on:click="backward">Backward</button>
-  <button v-on:click="forward">Forward</button>
 </template>
 
-<style>
+<style scoped>
 /* .blogs-flex {
   display: flex;
   column-gap: 10%;
@@ -27,7 +29,7 @@
 
   width: 160px;
   height: 100px;
-  /* background: var(--color-desaturated); */
+  background: var(--color-desaturated);
   border: 2px solid var(--color-blackish);
 
   transition: 0.5s ease;
@@ -66,6 +68,10 @@
 .blog2, .blog4 {
   transform: scale(1.5);
 } */
+
+button {
+  margin-top: 20px;
+}
 </style>
 
 <script>

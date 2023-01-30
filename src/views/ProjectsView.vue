@@ -1,39 +1,38 @@
 <template>
-  <h1>Projects</h1>
-  <div class="projects projects-grid">
-    <div class="project project1">
-      <img src="../assets/brother-blog-desktop-screenshot.png" />
-      <div class="project__details-container project__details-container--overlay project__details-container--center">
-        <div class="project__details">
-          <h2>A blog template</h2>
+  <div id="ProjectsView">
+    <h1>Projects</h1>
+    <div class="projects projects-grid">
+      <div class="project project1">
+        <img src="../assets/brother-blog-desktop-screenshot.png" />
+        <div class="project__details-container project__details-container--overlay project__details-container--center">
+          <div class="project__details">
+            <h2>A blog template</h2>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="project project2">
-      <img src="../assets/multi-step-form-desktop-screenshot.png" />
-      <div class="project__details-container project__details-container--overlay project__details-container--center">
-        <div class="project__details">
-          <h2>Multi-step form</h2>
+      <div class="project project2">
+        <img src="../assets/multi-step-form-desktop-screenshot.png" />
+        <div class="project__details-container project__details-container--overlay project__details-container--center">
+          <div class="project__details">
+            <h2>Multi-step form</h2>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="project project3">
-      <img src="../assets/news-homepage-desktop-screenshot.png" />
-      <div class="project__details-container project__details-container--overlay project__details-container--center">
-        <div class="project__details">
-          <h2>News homepage</h2>
+      <div class="project project3">
+        <img src="../assets/news-homepage-desktop-screenshot.png" />
+        <div class="project__details-container project__details-container--overlay project__details-container--center">
+          <div class="project__details">
+            <h2>News homepage</h2>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </template>
 
-<style>
-h1 {
-  color: var(--color-whitish);
-}
+<style scoped>
 .projects-grid {
   display: grid;
   grid-template-columns: auto auto;
@@ -61,7 +60,7 @@ h1 {
   background: var(--color-desaturated);
 }
 .project1 .project__details-container {
-  background: var(--color-primary)
+  background: var(--color-primary);
 }
 .project__details-container--overlay {
   position: absolute;

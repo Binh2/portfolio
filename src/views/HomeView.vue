@@ -1,5 +1,5 @@
 <template>
-  <div class="home-view home-view--flex">
+  <div class="home-view home-view--flex" id="HomeView">
     <div class="profile-images">
       <img src="../assets/my-face.png" class="profile-image profile-image1" />
       <FallAnimationComponent class="profile-image profile-image2" v-on:change-text="text.change()" />
