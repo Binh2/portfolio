@@ -25,20 +25,20 @@
   content: ">";
 }
 .blogs {
-  margin-top: 25px;
+  margin-top: 5vw;
   position: relative;
 
   /* 0.707 = sin(45deg) */
   /* 0.5 = sin(30deg) */
   --width: calc((100vw - 6px) * 0.5 / 2);
-  height: calc(var(--width));
+  --height: calc(var(--width) * 4 / 5);
+  height: calc(var(--height) * 5 / 4);
 }
 .blog, .forward, .backward {
   position: absolute;
   top: 0;
   left: 50%;
 
-  --height: calc(var(--width) * 4 / 5);
   width: var(--width);
   height: var(--height);
   background: var(--color-desaturated);
