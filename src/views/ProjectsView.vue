@@ -4,29 +4,29 @@
     <div class="projects projects-grid">
       <div class="project project1">
         <img src="../assets/brother-blog-desktop-screenshot.png" />
-        <div class="project__details-container project__details-container--overlay project__details-container--center">
+        <a href="https://binh2.github.io/brother-blog/" target="_blank" class="project__details-container project__details-container--overlay project__details-container--center">
           <div class="project__details">
             <h2>A blog template</h2>
           </div>
-        </div>
+        </a>
       </div>
 
       <div class="project project2">
         <img src="../assets/multi-step-form-desktop-screenshot.png" />
-        <div class="project__details-container project__details-container--overlay project__details-container--center">
+        <a href="https://binh2.github.io/multi-step-form/" target="_blank" class="project__details-container project__details-container--overlay project__details-container--center">
           <div class="project__details">
             <h2>Multi-step form</h2>
           </div>
-        </div>
+        </a>
       </div>
 
       <div class="project project3">
         <img src="../assets/news-homepage-desktop-screenshot.png" />
-        <div class="project__details-container project__details-container--overlay project__details-container--center">
+        <a href="https://binh2.github.io/news-homepage/" target="_blank" class="project__details-container project__details-container--overlay project__details-container--center">
           <div class="project__details">
             <h2>News homepage</h2>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   </div>
@@ -61,6 +61,7 @@
 
 .project__details-container {
   background: var(--color-desaturated);
+  text-decoration: none;
 }
 .project1 .project__details-container {
   background: var(--color-primary);

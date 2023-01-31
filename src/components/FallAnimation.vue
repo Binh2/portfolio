@@ -5,6 +5,7 @@
     v-bind:style="{
       left: x + 'px',
       top: y + 'px',
+      opacity: fallAnimation.opacity,
     }"
     v-if="!fallAnimation.isDisplayNone"
   ></div>
@@ -25,11 +26,15 @@ export default {
     const { _position: y, update: updateY } = useNewtonianPhysicPosition(100, randomInRange(-150, -80));
     const fallAnimation = reactive({
       isDisplayNone: false,
+      opacity: 1,
       startFallAnimation() {
         if (!this.isClicked) {
           const interval = 20;
           const intervalId = setInterval(() => {
-            if (y.value >= window.innerHeight) this.isDisplayNone = true;
+            if (y.value >= window.innerHeight) {
+              this.opacity = 0;
+              setTimeout(() => this.isDisplayNone = true, 1000);
+            }
             else {
               updateX(interval);
               updateY(interval);
@@ -37,7 +42,8 @@ export default {
           }, interval);
           setTimeout(() => {
             clearInterval(intervalId);
-            this.isDisplayNone = true;
+            this.opacity = 0;
+            setTimeout(() => this.isDisplayNone = true, 1000);
           }, 10000);
           context.emit("changeText");
         }
@@ -53,3 +59,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+div {
+  transition: opacity 1s ease;
+}
+</style>
