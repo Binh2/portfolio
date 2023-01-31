@@ -42,7 +42,7 @@
   width: var(--width);
   height: var(--height);
   background: var(--color-desaturated);
-  border: 2px solid var(--color-blackish);
+  border: 2px solid var(--color-desaturated);
 
   transition: 0.5s ease;
 
@@ -65,7 +65,7 @@
   background: var(--color-desaturated);
   opacity: 0.5;
   color: var(--color-whitish);
-  border-width: 0;
+  /* border-width: 0; */
   font-weight: bold;
 
   z-index: 4; 
@@ -77,6 +77,7 @@
   background: transparent;
   opacity: 1;
   color: var(--color-desaturated);
+  border-color: var(--color-desaturated);
   cursor: pointer;
 }
 
