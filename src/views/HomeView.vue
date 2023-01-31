@@ -34,6 +34,9 @@
 </template>
 
 <style scoped>
+#HomeView {
+  scroll-snap-align: start;
+}
 .home-view {
   --home-view--background-color: var(--color-desaturated);
   --profile-images--size: 150px;

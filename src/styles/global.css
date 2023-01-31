@@ -6,6 +6,11 @@
   --color-whitish: hsl(37, 100%, 97%);
   --color-desaturated: hsl(29, 30%, 55%);
 
+  --color-values-primary: 40, 100%, 50%;
+  --color-values-blackish: 0, 0%, 21%;
+  --color-values-whitish: 37, 100%, 97%;
+  --color-values-desaturated: 29, 30%, 55%;
+
   --sans-serif-font-family: Arial, Verdana, sans-serif;
 
   font-family: var(--sans-serif-font-family);
@@ -15,6 +20,7 @@
 
 ::-webkit-scrollbar {
   width: 6px;
+  height: 6px;
   opacity: 0.1;
   transition: 0.5s ease;
   border-radius: 6px;
@@ -26,6 +32,18 @@
   background-color: gray;
   /* outline: 1px solid slategrey; */
   border-radius: 6px;
+}
+
+html {
+  /* scroll-snap-type: y proximity; */
+  scroll-behavior: smooth;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  
+  /* 30px from NavBarView margin top and bottom, and 1em from NavBarView font-size */
+  scroll-padding-top: calc(30px + 1em);
 }
 
 h1 {

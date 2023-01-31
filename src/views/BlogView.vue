@@ -1,34 +1,46 @@
 <template>
-  <div id="BlogView">
-    <h1>Blog</h1>
-    <div class="blogs blogs-flex">
-      <iframe src="https://binh2.github.io/multi-step-form/" class="blog" v-bind:class="[ 'blog' + (blog1Order + 1) ]"></iframe>
+  <h1>Blog (Currently, I have no blog, yet)</h1>
+  <div id="BlogView" >
+    <div class="blogs">
+      <button class="backward" v-on:click="backward"></button>
+      <!-- <iframe src="https://binh2.github.io/multi-step-form/" class="blog" v-bind:class="[ 'blog' + (blog1Order + 1) ]"></iframe> -->
+      <div class="blog" v-bind:class="[ 'blog' + (blog1Order + 1) ]">1</div>
       <div class="blog" v-bind:class="[ 'blog' + (blog2Order + 1) ]">2</div>
       <div class="blog" v-bind:class="[ 'blog' + (blog3Order + 1) ]">3</div>
       <div class="blog" v-bind:class="[ 'blog' + (blog4Order + 1) ]">4</div>
       <div class="blog" v-bind:class="[ 'blog' + (blog5Order + 1) ]">5</div>
+      <button class="forward" v-on:click="forward"></button>
     </div>
-    <button v-on:click="backward">Backward</button>
-    <button v-on:click="forward">Forward</button>
   </div>
 </template>
 
 <style scoped>
-/* .blogs-flex {
-  display: flex;
-  column-gap: 10%;
-} */
-.blogs {
-  position: relative;
-  width: 160px;
-  height: 100px;
+#BlogView {
+  scroll-snap-align: start;
 }
-.blog {
+.backward:before {
+  content: "<";
+}
+.forward:before {
+  content: ">";
+}
+.blogs {
+  margin-top: 25px;
+  position: relative;
+
+  /* 0.707 = sin(45deg) */
+  /* 0.5 = sin(30deg) */
+  --width: calc((100vw - 6px) * 0.5 / 2);
+  height: calc(var(--width));
+}
+.blog, .forward, .backward {
   position: absolute;
   top: 0;
+  left: 50%;
 
-  width: 160px;
-  height: 100px;
+  --height: calc(var(--width) * 4 / 5);
+  width: var(--width);
+  height: var(--height);
   background: var(--color-desaturated);
   border: 2px solid var(--color-blackish);
 
@@ -36,38 +48,65 @@
 
   color: var(--color-whitish);
   text-align: center;
-  line-height: 100px;
+  line-height: var(--height);
   vertical-align: middle;
+  font-size: 3em;
 
-  /* style iframe */
-  transform: scale(0.25);
+  /* 0.414 = tan(22.5deg) */
+  /* 0.268 = tan(15deg) */
+  /* -10px buffer for more spacing between blog element */
+  transform-origin: center center calc(var(--width) / -2 / 0.268 - 10px);
+  translate: -50%;
+  --perspective: 2500px;
 }
+.backward, .forward {
+  margin: auto 0;
+  /* background: hsl(var(--color-values-whitish), 0.5); */
+  background: var(--color-desaturated);
+  opacity: 0.5;
+  color: var(--color-whitish);
+  border-width: 0;
+  font-weight: bold;
+
+  z-index: 4; 
+}
+.backward:hover, .forward:hover {
+  /* background: var(--color-whitish); */
+  /* background: hsla(var(--color-values-desaturated), 0.8);
+  opacity: 1; */
+  background: transparent;
+  opacity: 1;
+  color: var(--color-desaturated);
+  cursor: pointer;
+}
+
 .blog1 {
-  transform: perspective(800px) translateZ(100px) rotateY(-60deg);
-  left: 0;
+  z-index: 1;
+  opacity: 0;
+}
+.blog1, .backward {
+  transform: perspective(var(--perspective)) rotateY(-60deg);
 }
 .blog2 {
-  transform: perspective(800px) translateZ(173.21px) rotateY(-30deg);
-  left: calc(73.21px * 2);
+  transform: perspective(var(--perspective)) rotateY(-30deg);
+  z-index: 2;
 }
 .blog3 {
-  transform: perspective(800px) translateZ(200px) rotateY(0deg);
-  left: calc(173.21px * 2);
+  transform: perspective(var(--perspective)) rotateY(0deg);
+  z-index: 3;
+  border-color: var(--color-primary);
 }
 .blog4 {
-  transform: perspective(800px) translateZ(173.21px) rotateY(30deg);
-  left: calc(273.21px * 2);
+  transform: perspective(var(--perspective)) rotateY(30deg);
+  z-index: 2;
+}
+.blog5, .forward {
+  transform: perspective(var(--perspective)) rotateY(60deg);
 }
 .blog5 {
-  transform: perspective(800px) translateZ(100px) rotateY(60deg);
-  left: calc(346.41px * 2);
+  z-index: 1;
+  opacity: 0;
 }
-/* .blog3 {
-  transform: scale(2);
-}
-.blog2, .blog4 {
-  transform: scale(1.5);
-} */
 
 button {
   margin-top: 20px;

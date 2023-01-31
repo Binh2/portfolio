@@ -1,6 +1,6 @@
 <template>
+  <h1>Projects</h1>
   <div id="ProjectsView">
-    <h1>Projects</h1>
     <div class="projects projects-grid">
       <div class="project project1">
         <img src="../assets/brother-blog-desktop-screenshot.png" />
@@ -33,6 +33,9 @@
 </template>
 
 <style scoped>
+#ProjectsView {
+  scroll-snap-align: start;
+}
 .projects-grid {
   display: grid;
   grid-template-columns: auto auto;
