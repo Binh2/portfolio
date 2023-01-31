@@ -1,6 +1,6 @@
 <template>
-  <h1>Blog (Currently, I have no blog, yet)</h1>
-  <div id="BlogView" >
+  <section id="BlogView">
+    <h1>Blog (Currently, I have no blog, yet)</h1>
     <div class="blogs">
       <button class="backward" v-on:click="backward"></button>
       <!-- <iframe src="https://binh2.github.io/multi-step-form/" class="blog" v-bind:class="[ 'blog' + (blog1Order + 1) ]"></iframe> -->
@@ -11,7 +11,7 @@
       <div class="blog" v-bind:class="[ 'blog' + (blog5Order + 1) ]">5</div>
       <button class="forward" v-on:click="forward"></button>
     </div>
-  </div>
+  </section>
 </template>
 
 <style scoped>

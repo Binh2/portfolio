@@ -44,7 +44,7 @@ html {
   
   /* 30px from NavBarView margin top and bottom, and 1em from NavBarView font-size */
   scroll-padding-top: calc(30px + 1em);
-  overflow: overlay; /* deprecated */
+  overflow-y: overlay; /* deprecated */
 }
 body {
   padding-bottom: 20px;
@@ -54,4 +54,8 @@ h1 {
   font-size: 1.8em;
   margin: 20px 15px 10px;
   color: var(--color-whitish);
+}
+h2 {
+  font-size: 1.5em;
+  margin: 0 0 10px;
 }

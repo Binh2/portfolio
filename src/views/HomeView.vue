@@ -1,5 +1,5 @@
 <template>
-  <div class="home-view home-view--flex" id="HomeView">
+  <main class="home-view home-view--flex" id="HomeView">
     <div class="profile-images">
       <img src="../assets/my-face.png" class="profile-image profile-image1" />
       <FallAnimationComponent class="profile-image profile-image2" v-on:change-text="text.change()" />
@@ -30,7 +30,7 @@
     <blockquote v-else-if="text.id == 6">I'm sorry, okay?</blockquote>
     <blockquote v-else-if="text.id == 7">I'm not handsome, yet.</blockquote>
     <blockquote v-else-if="text.id == 8">You got me.</blockquote>
-  </div>
+  </main>
 </template>
 
 <style scoped>

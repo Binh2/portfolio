@@ -1,21 +1,21 @@
 <template>
-  <div id="ContactView">
+  <footer id="ContactView">
     <h1>Contact</h1>
     <ul>
       <li>
         <span>Frontend Mentor: </span>
-        <a href="https://www.frontendmentor.io/profile/Binh2">@Binh2</a>
+        <a href="https://www.frontendmentor.io/profile/Binh2" target="_blank">@Binh2</a>
       </li>
       <li>
         <span>Twitter: </span>
-        <a href="https://twitter.com/hgqbinh2002">@hgqbinh2002</a>
+        <a href="https://twitter.com/hgqbinh2002" target="_blank">@hgqbinh2002</a>
       </li>
       <li>
         <span>LinkedIn: </span>
-        <a href="https://www.linkedin.com/in/hgqbinh2002/">hgqbinh2002</a>
+        <a href="https://www.linkedin.com/in/hgqbinh2002/" target="_blank">hgqbinh2002</a>
       </li>
     </ul>
-  </div>
+  </footer>
 </template>
 
 <style scoped>
