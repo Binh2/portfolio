@@ -11,17 +11,7 @@
       <FallAnimationComponent class="profile-image profile-image8" v-on:change-text="text.change()" />
     </div>
     <blockquote v-if="text.id == 1">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-      vestibulum magna in urna feugiat sagittis. Nam vel ullamcorper ipsum,
-      vitae tristique dui. Ut in enim id tortor dignissim varius et at est.
-      Nulla ut nulla ante. Suspendisse condimentum lacinia ex, vitae ullamcorper
-      magna faucibus sit amet. Donec eget eleifend nibh. Sed in mauris
-      venenatis, congue tellus convallis, mattis purus. Aliquam erat volutpat.
-      Nulla dapibus maximus felis, rutrum vestibulum ante molestie condimentum.
-      Curabitur dapibus arcu in lacus viverra efficitur. Aenean sit amet
-      venenatis odio, eu interdum ipsum. Pellentesque quis sapien a magna auctor
-      rutrum. Suspendisse potenti. Aenean fringilla aliquet dolor, vel malesuada
-      augue aliquam vitae.
+      My name is Ben (in English). I'm a front-end dev, working on a few personal projects. Haven't worked for a company yet, but I'm teachable, approachable, and willing to work long-term, and long hours.
     </blockquote>
     <blockquote v-else-if="text.id == 2">Don't do that!</blockquote>
     <blockquote v-else-if="text.id == 3">It's time to stop</blockquote>
@@ -36,7 +26,7 @@
 <style scoped>
 #HomeView {
   scroll-snap-align: start;
-  
+
   /* 30px from NavBarView margin top and bottom, and 1em from NavBarView font-size */
   scroll-margin-top: calc(30px + 1em);
 }
@@ -44,7 +34,7 @@
   --home-view--background-color: var(--color-desaturated);
   --profile-images--size: 150px;
   background: var(--home-view--background-color);
-  padding: 100px;
+  padding: 15vw 10vw;
 }
 .home-view--flex {
   display: flex;
@@ -55,7 +45,7 @@
 blockquote,
 blockquote::after,
 blockquote::before {
-  --profile-images--padding: 10px;
+  --profile-images--padding: 0px;
   --blockquote--min-height: 150px;
   --blockquote--background-color: var(--color-whitish);
   --blockquote-before--height: 50px;
@@ -108,8 +98,10 @@ blockquote {
   /* display: inline-block; */
   background: var(--blockquote--background-color);
   border-radius: 10px;
-  padding: 10px;
-  min-height: var(--blockquote--min-height);
+
+  --padding: 10px;
+  padding: var(--padding);
+  min-height: calc(var(--blockquote--min-height) - var(--padding) * 2);
   position: relative;
   display: inline-block;
   margin-left: var(--blockquote-before--width);
@@ -139,6 +131,11 @@ blockquote:after {
   background: var(--home-view--background-color);
   box-shadow: 0 calc((var(--blockquote-before--height) + 1px) * -1) 0 0
     var(--home-view--background-color);
+}
+@media screen and (max-width: 600px) {
+  .home-view {
+    padding: 6vw 3vw;
+  }
 }
 </style>
 
