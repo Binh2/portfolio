@@ -43,7 +43,7 @@ html {
   flex-direction: column;
   
   /* 30px from NavBarView margin top and bottom, and 1em from NavBarView font-size */
-  scroll-padding-top: calc(30px + 1em);
+  /* scroll-padding-top: calc(30px + 1em); */
   overflow-y: overlay; /* deprecated */
 }
 body {

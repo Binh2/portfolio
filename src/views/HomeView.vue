@@ -36,6 +36,9 @@
 <style scoped>
 #HomeView {
   scroll-snap-align: start;
+  
+  /* 30px from NavBarView margin top and bottom, and 1em from NavBarView font-size */
+  scroll-margin-top: calc(30px + 1em);
 }
 .home-view {
   --home-view--background-color: var(--color-desaturated);
