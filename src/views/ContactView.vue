@@ -33,6 +33,7 @@ li {
   list-style-position: inside;
   color: var(--color-whitish);
   margin-bottom: 5px;
+  font-size: 1em;
 }
 li span, li a {
   color: var(--color-whitish);
