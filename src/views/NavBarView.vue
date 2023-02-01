@@ -53,15 +53,14 @@ import { onMounted, ref } from "vue";
 export default {
   setup() {
     const activeLinkId = ref(1);
-    const landmarks = document.querySelectorAll("main[id], section[id], footer[id]");
 
     function highlightNavLink() {
-      let scrollY = window.pageYOffset;
+      let scrollY = window.pageYOffset + window.innerHeight / 2;
   
-      // Now we loop through landmarks to get height, top and ID values for each
+      const landmarks = document.querySelectorAll("main[id], section[id], footer[id]");
       landmarks.forEach((landmark, index) => {
-        const landmarkHeight = landmark.offsetHeight;
-        const landmarkTop = landmark.offsetTop - 50;
+        let landmarkHeight = landmark.offsetHeight;
+        let landmarkTop = landmark.offsetTop - 50;
 
         if (
           scrollY > landmarkTop &&
@@ -71,7 +70,10 @@ export default {
         }
       });      
     }
-    onMounted(() => window.addEventListener("scroll", highlightNavLink));
+    onMounted(() => { 
+      window.addEventListener("scroll", highlightNavLink);
+
+    });
     return {
       activeLinkId,
     };

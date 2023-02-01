@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import { ref, reactive } from "vue";
+import { reactive } from "vue";
 import { useNewtonianPhysicPosition } from "../composables/NewtonianPhysicPosition.ts";
 
 export default {
