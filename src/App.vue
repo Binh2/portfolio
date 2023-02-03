@@ -1,6 +1,7 @@
 <template>
   <NavBarView />
   <router-view/>
+  <FooterView />
 </template>
 
 <style>
@@ -16,10 +17,12 @@
 
 <script>
 import NavBarView from "./views/NavBarView.vue";
+import FooterView from "./views/FooterView.vue";
 
 export default {
   components: {
     NavBarView,
+    FooterView,
   },
 };
 </script>
