@@ -6,5 +6,6 @@
 
 module.exports = {
   siteName: 'My portfolio',
+  icon: './src/assets/my-face.jpg',
   plugins: []
 }

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # portfolio - My personal portfolio
 
 ## Moltivation

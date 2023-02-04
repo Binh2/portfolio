@@ -23,15 +23,13 @@
 import MainView from "../views/MainView.vue";
 
 export default {
+  metaInfo: {
+    title: 'Home',
+  },
   components: {
     MainView,
   },
 };
-// export default {
-//   metaInfo: {
-//     title: 'Hello, world!'
-//   }
-// }
 </script>
 
 <style>
