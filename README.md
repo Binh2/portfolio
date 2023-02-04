@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # portfolio - My personal portfolio
 
 ## Moltivation
@@ -108,24 +109,19 @@ git clone https://github.com/Binh2/portfolio.git
 
 ### Project setup (Download JS dependencies)
 ```
-npm install
-```
-
-### Lints and fixes files
-```
-npm run lint
+yarn install
 ```
 
 ### Compiles and hot-reloads for development
 ```
-npm run serve
+yarn develop
 ```
 
 ## How to deploy to my Github Pages (btw, you can't do this without my permission unless you fork my project).
 
 ### Compiles and minifies for production (Call npm run deploy will run this command automatically so you don't need to run this command).
 ```
-npm run build
+yarn build
 ```
 
 ## Need more info on customizing Vue CLI configuration
@@ -157,3 +153,4 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ## Acknowledgments
 
 - Big thanks to myself for complete this project
+

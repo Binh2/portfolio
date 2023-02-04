@@ -13,7 +13,7 @@
 
 <script>
 import { reactive } from "vue";
-import { useNewtonianPhysicPosition } from "../composables/NewtonianPhysicPosition.ts";
+import { useNewtonianPhysicPosition } from "../composables/NewtonianPhysicPosition.js";
 
 export default {
   emits: ["changeText"],
@@ -28,31 +28,28 @@ export default {
       isDisplayNone: false,
       opacity: 1,
       startFallAnimation() {
-        if (!this.isClicked) {
-          const interval = 20;
-          const intervalId = setInterval(() => {
-            if (y.value >= window.innerHeight) {
-              this.opacity = 0;
-              setTimeout(() => this.isDisplayNone = true, 1000);
-            }
-            else {
-              updateX(interval);
-              updateY(interval);
-            }
-          }, interval);
-          setTimeout(() => {
-            clearInterval(intervalId);
-            this.opacity = 0;
-            setTimeout(() => this.isDisplayNone = true, 1000);
-          }, 10000);
-          context.emit("changeText");
-        }
+        const interval = 20;
+        const intervalId = setInterval(() => {
+          if (y.value >= window.innerHeight) {
+            fallAnimation.opacity = 0;
+            setTimeout(() => fallAnimation.isDisplayNone = true, 1000);
+          }
+          else {
+            updateX(interval);
+            updateY(interval);
+          }
+        }, interval);
+        setTimeout(() => {
+          clearInterval(intervalId);
+          fallAnimation.opacity = 0;
+          setTimeout(() => fallAnimation.isDisplayNone = true, 1000);
+        }, 10000);
+        context.emit("changeText");
       },
     });
 
     return {
       x,
-      updateX,
       y,
       fallAnimation,
     };

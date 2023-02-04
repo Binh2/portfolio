@@ -1,7 +1,9 @@
 <template>
-  <HomeView />
-  <ProjectsView />
-  <BlogView />
+  <div>
+    <HomeView />
+    <ProjectsView />
+    <BlogView />
+  </div>
 </template>
 
 <script>
