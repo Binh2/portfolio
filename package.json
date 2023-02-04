@@ -3,11 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "build": "set NODE_OPTIONS='--openssl-legacy-provider' && gridsome build",
+    "build": "cross-env NODE_OPTIONS='--openssl-legacy-provider' && gridsome build",
     "develop": "gridsome develop",
     "explore": "gridsome explore"
   },
   "dependencies": {
+    "cross-env": "^7.0.3",
     "gridsome": "^0.7.0"
   }
 }
