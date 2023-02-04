@@ -22,8 +22,8 @@
       <p class="follow-container__header header">Follow me </p>
       <ul class="follow">
         <li>
-          <img src="../assets/svgs/twitter-logo.svg" alt="Twitter logo" />
-          <a href="https://twitter.com/hgqbinh2002" target="_blank">@hgqbinh2002</a>
+          <img src="../assets/svgs/github-logo.svg" alt="Github logo" />
+          <a href="https://github.com/Binh2" target="_blank">Binh2</a>
         </li>
         <li>
           <img src="../assets/svgs/linkedin-logo.svg" alt="Linkedin logo" />
@@ -37,11 +37,11 @@
     </div>
 
     <div class="subscribe-container">
-      <p class="subscribe-container__header header">Subscribe</p>
+      <p class="subscribe-container__header header">Subscribe (Currently, subscribe doesn't work yet)</p>
       <p>to not miss any new updates from me</p>
       <form class="subscribe">
-        <input type="text" id="footer-subscribe__email" name="email" placeholder="johndoe@gmail.com" required />
-        <button type="button">Subscribe</button>
+        <input type="text" id="footer-subscribe__email" name="email" placeholder="johndoe@gmail.com" disabled required />
+        <button type="button" disabled>Subscribe</button>
       </form>
     </div>
     <p class="copyright">© 2023 Hoang Gia Quoc Binh. All rights reserved.</p>
@@ -63,7 +63,7 @@ footer {
   grid-column-start: 1;
   grid-column-end: 4;
 
-  margin: 0.2em auto 0;
+  margin: 1em auto 0;
 }
 img[src*=".svg"] {
   height: 1.3em;

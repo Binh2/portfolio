@@ -6,3 +6,4 @@
 ["Call, connection, mobile icon"](https://www.iconfinder.com/icons/2303164/call_connection_mobile_number_phone_ring_telephone_icon) by [Laura Reen](https://www.iconfinder.com/laurareen) is licenced under [CC BY-NC 3.0](https://creativecommons.org/licenses/by-nc/3.0/legalcode).
 ["Email, gmail, mail icon"](https://www.iconfinder.com/icons/4202011/email_gmail_mail_logo_social_social_media_icon) by [Flatart](https://www.iconfinder.com/Flatart) is licenced under [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/legalcode).
 ["Location, map icon"](https://www.iconfinder.com/icons/5172573/location_map_icon) by [Flatart](https://www.iconfinder.com/Flatart) is licenced under [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/legalcode).
+["Github, logo, logos icon"](https://www.iconfinder.com/icons/4373152/github_logo_logos_icon) by [Flatart](https://www.iconfinder.com/Flatart) is licenced under "Free for commercial use (Include link to authors website)"

@@ -46,9 +46,9 @@ html {
   /* scroll-padding-top: calc(30px + 1em); */
   overflow-y: overlay; /* deprecated */
 }
-body {
+/* body {
   padding-bottom: 20px;
-}
+} */
 
 h1 {
   font-size: 1.8em;
