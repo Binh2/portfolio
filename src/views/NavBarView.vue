@@ -4,8 +4,7 @@
     <ul class="ul--flex">
       <li><a href="#HomeView" v-bind:class="{ active: activeLinkId == 1 }">Home</a></li>
       <li><a href="#ProjectsView" v-bind:class="{ active: activeLinkId == 2 }">Projects</a></li>
-      <li><a href="#BlogView" v-bind:class="{ active: activeLinkId == 3 }">Blog</a></li>
-      <li><a href="#ContactView" v-bind:class="{ active: activeLinkId == 4 }">Contact</a></li>
+      <li><a href="#BlogView" v-bind:class="{ active: activeLinkId >= 3 }">Blog</a></li>
     </ul>
   </nav>
 </template>
